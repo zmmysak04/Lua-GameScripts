@@ -1,0 +1,13 @@
+-- This script will go directly with the eladerstats script found in this repository
+
+local lstats = game:GetService("Players").LocalPlayer:WaitForChild("lstats") -- defines leaderstats, which we parented earlier to player
+local Gold = lstats:FindFirstChild("Gold") -- Change the "Gold" with the currency you made, if you chanegd it
+local button = script.Parent -- button !MAKE SURE TO CREATE A TEXT BUTTON INSIDE STARTER GUI! In order to do this, create a screengui in starter gui, then add a text button, and customize it to your liking, put the script in the button and your done
+
+button.MouseButton1Down:Connect(function() -- Detects if the player clicked the button
+	Gold.Value = Currency.Value + 20 -- When the player will click the button, his money will go higher by 20, if you want more, change that value
+end)
+
+--make sure you put the script inside  the textbutton defined on line 5
+
+-- zandy
