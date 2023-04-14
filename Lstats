@@ -1,11 +1,15 @@
-game.Players.PlayerAdded:Connect(function(player) -- Checks whena  new player joins the game
+game.Players.PlayerAdded:Connect(function(player) -- Checks when a new player joins the game
 
 	local lstats = Instance.new("Folder")  
 	lstats.Name = "leaderstats" -- These three lines create a Folder for leaderstats, and parent it to player on line 5
 	lstats.Parent = player
 	
+	[[-- in order to reference parents in shorter lines of code, you can use a string liek this: {"lstats", plr}
+	note that the stats (or whatever you reference, must be its own name defined in its script) only the 'reference' is quotated, the parent, plr in this case is not. 
+	
 	local money = Instance.new("IntValue") -- Defines 'currency' name
 	coins.Name = "Coins"
-	coins.Value = 0 --default value upon joining
+	coins.Value = 0 --default value upon joining, you can change to whatever you like
 	coins.Parent = lstats -- parents coins to leaderstats
 end)
+
